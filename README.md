@@ -1,6 +1,6 @@
 # 🌉 AlgoBridge - LeetCode to GitHub Sync
 
-**AlgoBridge** is a powerful Chrome extension that automatically syncs your accepted LeetCode solutions directly to a GitHub repository. It helps you build a clean, organized portfolio of your DSA (Data Structures & Algorithms) solutions without any manual effort.
+**AlgoBridge** is a powerful Chrome extension that automatically syncs your LeetCode solutions directly to a GitHub repository. It helps you build a clean, organized portfolio of your DSA (Data Structures & Algorithms) solutions without any manual effort.
 
 ## 🚀 Features
 
