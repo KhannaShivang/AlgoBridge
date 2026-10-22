@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoBridge - LeetCode to GitHub</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="icon">🌉</span>
+        <h1>AlgoBridge</h1>
+      </div>
+      <div id="connection-status" class="status-badge disconnected">Disconnected</div>
+    </header>
+
+    <main>
+      <!-- GitHub Authentication Card -->
+      <section id="auth-card" class="card">
+        <div id="user-info" class="user-info hidden">
+          <img id="user-avatar" src="" alt="Avatar">
+          <div class="user-details">
+            <span id="user-login" class="username">@username</span>
+            <span class="user-label">Connected to GitHub</span>
+          </div>
+          <button id="disconnect-btn" class="btn-text">Disconnect</button>
+        </div>
+
+        <div id="login-form">
+          <div class="field">
+            <label for="gh-token">GitHub Personal Access Token</label>
+            <div class="input-with-action">
+              <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx">
+              <button id="toggle-token-visibility" type="button" class="icon-btn" title="Toggle visibility">👁️</button>
+            </div>
+            <p class="help-text">
+              Need a token? <a href="https://github.com/settings/tokens/new?scopes=repo&description=AlgoBridge%20LeetCode%20Sync" target="_blank">Generate one with 'repo' scope</a>
+            </p>
+          </div>
+          <button id="connect-btn" class="btn btn-primary">Connect Account</button>
+        </div>
+      </section>
+
+      <!-- Sync Control Card -->
+      <section id="sync-control-card" class="card">
+        <div class="sync-header">
+          <div class="sync-title-group">
+            <span class="sync-title">Auto-Sync</span>
+            <span id="sync-status-badge" class="sync-badge enabled">Active</span>
+          </div>
+          <label class="switch" title="Toggle Auto-Sync">
+            <input type="checkbox" id="sync-toggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <p id="sync-description" class="sync-description">
+          Solutions are automatically pushed to GitHub upon acceptance.
+        </p>
+      </section>
+
+      <!-- Repository Settings Card -->
+      <section id="repo-card" class="card">
+        <h3>Repository Settings</h3>
+        <div class="field">
+          <label for="repo-name">Repository Name</label>
+          <input type="text" id="repo-name" placeholder="dsa-solutions" value="dsa-solutions">
+        </div>
+        <div class="field row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="is-private" checked>
+            <span>Private Repository</span>
+          </label>
+        </div>
+        <button id="save-settings-btn" class="btn btn-secondary">Save Settings</button>
+      </section>
+
+      <!-- Sync History Card -->
+      <section id="history-card" class="card">
+        <h3>Recent Syncs</h3>
+        <div id="history-list" class="history-list">
+          <div class="empty-state">No submissions synced yet.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://leetcode.com/problemset/" target="_blank">LeetCode</a>
+      <span class="dot">•</span>
+      <a href="#" id="view-repo-link" class="hidden">View Repo</a>
+      <span id="repo-dot" class="dot hidden">•</span>
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
